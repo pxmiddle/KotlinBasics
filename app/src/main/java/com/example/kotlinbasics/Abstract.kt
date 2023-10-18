@@ -1,7 +1,7 @@
 package com.example.kotlinbasics
 
 abstract class Mammal(private val name: String, private val origin: String,
-    private val weight: Double){ // Concrete (Non Abstract) Properties
+                      private val weight: Double){ // Concrete (Non Abstract) Properties
 
     // Abstract Property (Must be overriden by SubClasses)
     abstract var maxSpeed: Double
@@ -13,7 +13,7 @@ abstract class Mammal(private val name: String, private val origin: String,
     // Concrete (Non Abstract) Method
     fun displayDetails(){
         println("Name: $name, Origin $origin, Weight: $weight, " +
-        "Max Speed: $maxSpeed")
+                "Max Speed: $maxSpeed")
     }
 }
 
@@ -32,7 +32,7 @@ class Human(name: String, origin: String, weight: Double,
 }
 
 class Elephant(name: String, origin: String, weight: Double,
-    override var maxSpeed: Double): Mammal(name, origin, weight){
+               override var maxSpeed: Double): Mammal(name, origin, weight){
 
     override fun run() {
         // Code to run
